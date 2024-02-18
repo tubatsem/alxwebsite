@@ -25,12 +25,16 @@
             color: #fff;
             padding: 10px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 15px;
+            cursor: pointer;
         }
 
         section {
@@ -46,6 +50,25 @@
             bottom: 0;
             width: 100%;
         }
+
+        .comments {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #eee;
+        }
+
+        #comment-form {
+            margin-bottom: 20px;
+        }
+
+        #comment-list {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+
+        .comment-item {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -58,12 +81,13 @@
         <a href="#bio">Bio</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#elevator-pitch">Elevator Pitch</a>
+        <a href="#comments">Comments</a>
     </nav>
 
     <section id="bio">
         <h2>Bio</h2>
         <p>Meet Tubatse, a dedicated professional with a passion for Salesforce and a commitment to continuous learning. Currently serving as a Salesforce Administrator at Tech Innovators, Tubatse takes pride in leveraging the power of Salesforce to optimize business processes and enhance customer relationships. With a keen interest in becoming a well-rounded Salesforce professional, Tubatse is on a journey to achieve Salesforce certifications and actively engage with the community.</p>
-        <p>Tubatse’s goal is to contribute to innovative Salesforce solutions that drive business success. In pursuit of these goals, Tubatse has crafted a clear and engaging bio that outlines a focused career path within the Salesforce ecosystem. The narrative seamlessly integrates specific details about the chosen tech track, emphasizing the commitment to skill development and community engagement.</p>
+        <p>Tubatse’s goal is to contribute to innovative Salesforce solutions that drive business success. In pursuit of these goals, Alex has crafted a clear and engaging bio that outlines a focused career path within the Salesforce ecosystem. The narrative seamlessly integrates specific details about the chosen tech track, emphasizing the commitment to skill development and community engagement. The feedback from peers, particularly on the clarity and conciseness of the bio, is reflected in this revised version.</p>
     </section>
 
     <section id="portfolio">
@@ -77,11 +101,33 @@
 
     <section id="elevator-pitch">
         <h2>Elevator Pitch</h2>
-        <!-- Placeholder for your elevator pitch -->
+        <p><a href="https://youtu.be/ucDQ4-z491U" target="_blank">Elevator Pitch Video</a></p>
+    </section>
+
+    <section id="comments" class="comments">
+        <h2>Comments</h2>
+        <div id="comment-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name">
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" placeholder="Write your comment here"></textarea>
+
+            <button onclick="submitComment()">Submit Comment</button>
+        </div>
+
+        <div id="comment-list">
+            <!-- Comment items will be added here dynamically -->
+        </div>
     </section>
 
     <footer>
+        <p>Contact: <a href="mailto:tubatse.mabuela@gmail.com">tubatse.mabuela@gmail.com</a></p>
         <p>&copy; 2024 Tubatse Mandy Mabuela</p>
     </footer>
-</body>
-</html>
+
+    <script>
+        function submitComment() {
+            var nameInput = document.getElementById("name");
+            var
+
